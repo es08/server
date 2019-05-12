@@ -1,0 +1,32 @@
+{
+  "MainNode": {
+    "mqtt":
+    {
+      "url": "mqtt://gb.netpie.io",
+      "username": "",
+      "password": "",
+      "clientId": ""
+    },
+    "sqlite":
+    {
+      "databaseName": "beacon.db"
+    },
+    "beacon":
+    {
+      "beaconTimeout": 20000,
+      "updateBeaconIntervalTime": 60000,
+      "topicBeaconStay": "/Beacon/gearname/scaner/beacon/update",
+      "topicBeaconExit": "/Beacon/gearname/scaner/beacon/exit"
+    }
+  },
+  "Summary": {
+    "server" :
+    {
+      "port": 3002
+    },
+    "sqlite":
+    {
+      "databaseName": "beacon.db"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+body {
+  background-image: url("../images/bg_pattern.png");
+  background-repeat: repeat;
+}
+
+.dataTables_scrollBody {
+  text-align: center;
+}
+
+.container {
+  background-color: #ffffff9e;
+}
+
+.jumbotron {
+  background-color: #e9ffff;
+}

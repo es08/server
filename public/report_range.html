@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="datepicker.min.css">
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css">
+
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="moment.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="datepicker.min.js"></script>
+  <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.flash.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.html5.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.print.min.js"></script>
+
+  <script type="text/javascript" src="js/report_range.js"></script>
+
+  </head>
+  <body>
+    <div class="">
+      <div class="jumbotron">
+        <h3>Track location</h3>
+        <div class="d-flex justify-content-between">
+          <div>
+            <div id="report_date"></div>
+          </div>
+          <div>
+            <a href="/">Show single day report</a>
+          </div>
+        </div>
+      </div>  
+
+      <form class="form-inline" autocomplete="off">        
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="inputPassword2" class="sr-only">Password</label>
+          <span>
+            From:
+            <input id="date-from" type="text" class="form-control">
+            To:
+            <input id="date-to" type="text" class="form-control">
+          </span>
+        </div>
+        <button type=button id="get-data" class="btn btn-primary mb-2">Show report </button>
+        <span id="loading" style="display: none;" class="badge badge-secondary">Loading</span>
+      </form>
+
+      <div class="alert alert-secondary" role="alert" id="empty" style="display: none;">
+        Nothing to show
+      </div>
+      <div class="table-wrapper-scroll-y">
+      <table class="table table-responsive-md table-striped table-hover" id="show_table_data">
+        <thead>
+          <tr id="table_title">
+            <td></td>
+          </tr>
+        </thead>
+        <tbody id="table_data">
+          <td></td>
+        </tbody>
+      </table>
+
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modalDetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Data in this location</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </body>
+</html>
+
