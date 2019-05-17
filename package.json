@@ -1,0 +1,25 @@
+{
+  "name": "server_beacon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "config": "^3.0.1",
+    "express": "^4.16.4",
+    "express-prettify": "^0.1.1",
+    "forever": "^0.15.3",
+    "fs": "0.0.1-security",
+    "jquery": "^3.3.1",
+    "js-datepicker": "^4.0.10",
+    "moment": "^2.24.0",
+    "mqtt": "^2.18.8",
+    "sqlite3": "^4.0.6"
+  }
+}
